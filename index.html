@@ -3,17 +3,28 @@
     <!--Head-->
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
         <title>Portfolio PBB</title>
         <link rel="stylesheet" type="text/css" href="portfolio.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <Style>
+            .fade-in-video { animation: fadeIn 5s; }
+
+            @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+            }
+        </Style>
     </head>
 
     <!--Body-->
     <body class="Background">
-        
+        <script>
+            document.body.classList.add('fade-out');
+        </script>
+       
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home"><i class="fa fa-home"></i>&nbsp;Home</a>
@@ -31,7 +42,7 @@
 
         <!--Background video-->
         <div id="Home">
-            <video autoplay muted lop id="Typing_Video">
+            <video class="fade-in-video" autoplay muted lop id="Typing_Video">
                 <source src="Typing.mp4" type="video/mp4">
                 <!--Display message if video fails to run-->
                 Your browser does not support HTML5 video.
@@ -86,7 +97,7 @@
                 <p>
                     You can view my Portfolio on my GitHub profile here:
                     <br>
-                    <p class="center"><a href="https://github.com/PabloBernalBas/Portfolio" target="_blank">Portfolio</a></p>
+                    <p class="center"><a href="https://github.com/PabloBernalBas/Projects" target="_blank">Academy Projects</a></p>
                 </p>
             </div>
             <!--Right column-->
