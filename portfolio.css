@@ -1,20 +1,26 @@
 /***** GENERAL STYLING *****/
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;/*This ensures that the page scrolling is smooth when the buttons on the nav bar is clicked */
 }
 
 /* Body */
 
 body {
-    margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
-
+    margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
+    opacity: 1; /* This and transition affect the page loading fade in effect */
+    transition: 3s opacity; /* This causes a 3 second fade in */
+    letter-spacing: .2vw; /* vw is a relative measurement, 1vw is equal to 1% of the viewport width */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw; 
+    overflow-x: hidden; /* This prevents the horizontal scroll bar from appearing when the quote is hovered over */
+    user-select: none; /* This prevents the text on the webpage from being highlighted by the user */
 }
 
 /* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: 'Courier New', Courier, monospace; /* Sets the font family of all h1 headings */
+    font-family: Arial, Helvetica, sans-serif; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-bottom: 3em; /* Adds a small margin above h1 elements */
     color: #000000fa;
@@ -45,16 +51,21 @@ h1:hover {
 p {
     font-family: 'Courier New', Courier, monospace;
     text-align: justify; /* Justify text within paragraph elements */
-    letter-spacing: 1px; /* This expands the text slightly */
-    padding: 16px 16px;
-    font-size: 12px;
+    letter-spacing: .1vw; /* This expands the text slightly */
+    padding: 1vw  1vw;
+    font-size: .7vw; /* Relative font sizing equal to 2.5% of the viewport width */
     margin: 4px 4px;
     transition: 0.3s;
 }
 
+p:hover {
+    transition: transform 1s; /* This makes the transform effect last 1 second */
+	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
+}
+
 /* Center class - this applies to all elements with the class "center" */
 .center {
-    padding-top: 4em;
+    padding-top: 1em;
     font-size: large;
     text-align: center; /* This center aligns the text */
 }
@@ -68,6 +79,8 @@ p {
 /* Anchor elements */
 a {
     color: blue; /* This ensures all links are blue */
+    cursor: pointer; /* This ensures all links change the mouse to a pointer when hovered over or clicked */
+    text-decoration: underline; /* This ensures all links are underlined */
 }
 
 /* Quotation elements */
@@ -82,8 +95,7 @@ img {
     max-width: 100%; /* Ensures all images stay within the width of their container */
     height: 340px; /* Sets the height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
-    margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
-    margin-right: auto;
+    margin: auto auto auto auto; /* This centers all images */
     border-radius: 20px;
 }
 
@@ -100,8 +112,8 @@ img:hover {
 /* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
 @media screen and (max-width: 576px) {
     img {
-        height: 100px;
-        margin-top: 150px;
+        height: auto;
+        margin: auto;
     }
 }
 
@@ -110,6 +122,8 @@ footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
     background-color: #555;
     text-align: center;
+    clear: both;
+    width: 100%;
 }
 
 /***** END OF GENERAL STYLING *****/
@@ -200,7 +214,7 @@ footer {
 }
 
 /* Screens that are 576px and smaller will not display the background video */
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 576px) {
     #Typing_Video {
         display: none;
     }
@@ -210,13 +224,12 @@ footer {
 .Video_Text {
     background: rgba(83, 83, 83, 0.3); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
-    width: 100%; /* Ensures the video-text container fills the width of the video */
-    padding: 30px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */ 
+    width: auto; /* Ensures the video-text container fills the width of the video */
+    padding-bottom: 5vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */ 
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveVideoText 3.75s;
     animation: moveVideoText 3.75s;
-    margin-top: 12em;
-    margin-bottom: 12em;
+    margin: 12em 0;
     font-family: Perpetua, Rockwell Extra Bold;
     font-size: 28px;
     text-align: center;
@@ -237,8 +250,8 @@ footer {
 .Column_1 {
     float: left;
     width: 50%; /* This ensures the column takes up half of the page width */
-    padding: 10px;
-    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+    padding: 1%;
+    padding-top: 1%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
     background-color: #c7c7c7; /* Sets the background color of the columns with class Column_1 */
     border-radius: 20px;
@@ -247,8 +260,9 @@ footer {
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+
 @media screen and (max-width: 576px) {
-    .Column_1 {
+    .Column_1, .Column_2, .Column_tall {
         overflow: auto;
     }
 }
@@ -267,18 +281,11 @@ footer {
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 
-.Column_tall {
-    height: 400px;
+.Row {
     float: left;
-    width: 50%;
-    padding: 10px;
-    padding-top: 1.9%;
-    background-size: contain;
-    border-radius: 20px;
-    border: 2px solid black;
+    width: 100%;
 }
 
-/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
 .Row:after {
 	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
 	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
@@ -360,3 +367,61 @@ form {
     background: #ffffff;
 }      
 /***** END OF CONTACT FORM STYLING *****/
+
+/*CARD */
+
+#card-box {
+    position: relative;
+    margin: auto;
+    padding: 10px;
+    align-content: center;
+}
+/* Float five columns side by side */
+.card-topview {
+    float: left;
+    width: 13%;
+    margin-left: 4em;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+  
+  /* Remove extra left and right margins, due to padding */
+.card-line {
+    margin-left: 10%;
+    margin-right: auto;
+}
+  
+  /* Clear floats after the columns */
+.card-line:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Responsive columns */
+ @media screen and (max-width: 576px) {
+    .card-topview {
+        width: 35%;
+        display: flex;
+        margin-bottom: 20px;
+    }
+}
+  
+/* Style the counter cards */
+.card {
+    align-content: center;
+    width: 150px;
+    height: 200px;
+    margin: 16%;
+    
+}
+
+#card-photo {
+    height: 150px;
+}
+
+.badge {
+    font-size: large;
+    align-content: center;
+}
+/*END CARD */
