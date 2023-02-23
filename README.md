@@ -7,7 +7,7 @@ This a display of sample websites that I made using HTML, CSS, JS and others.
 <a href="https://github.com/PabloBernalBas/Projects/blob/759aeeaecf02c439f3ed8d2ed44b2241e8bd1ffe/Space%20Travel/Index.html">Space Station Site</a><br>
 <a href="https://github.com/PabloBernalBas/Projects/blob/759aeeaecf02c439f3ed8d2ed44b2241e8bd1ffe/Academy%20Cinemas/acedemy_cinema.html">Movie Theater Site</a><br>
 <a href="https://github.com/PabloBernalBas/Projects/blob/759aeeaecf02c439f3ed8d2ed44b2241e8bd1ffe/One-Page%20Website/One-Page%20Site.html">One page Site</a><br>
-<a hhref="https://github.com/PabloBernalBas/Projects/blob/759aeeaecf02c439f3ed8d2ed44b2241e8bd1ffe/Pizza_Project/Pizza.html">Pizza project</a><br>
+<a href="https://github.com/PabloBernalBas/Projects/blob/759aeeaecf02c439f3ed8d2ed44b2241e8bd1ffe/Pizza_Project/Pizza.html">Pizza project</a><br>
 <a href="https://github.com/PabloBernalBas/Projects/blob/759aeeaecf02c439f3ed8d2ed44b2241e8bd1ffe/Calculator/Calculator.html">Calcultor</a><br>
 </ul>
 
