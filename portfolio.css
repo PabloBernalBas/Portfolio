@@ -52,7 +52,7 @@ p {
     font-family: 'Courier New', Courier, monospace;
     text-align: justify; /* Justify text within paragraph elements */
     letter-spacing: .1vw; /* This expands the text slightly */
-    padding: 1vw  1vw;
+    padding: 20px;
     font-size: .7vw; /* Relative font sizing equal to 2.5% of the viewport width */
     margin: 4px 4px;
     transition: 0.3s;
@@ -62,6 +62,18 @@ p:hover {
     transition: transform 1s; /* This makes the transform effect last 1 second */
 	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
 }
+
+@media screen and (min-width: 276px){
+    p{
+        font-size: 8px;
+    }
+}
+@media screen and (min-width: 768px){
+    p{
+        font-size: 12px;
+    }
+}
+
 
 /* Center class - this applies to all elements with the class "center" */
 .center {
@@ -110,7 +122,7 @@ img:hover {
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
 /* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 376px) {
     img {
         height: auto;
         margin: auto;
@@ -183,10 +195,18 @@ footer {
 }
 
 /* Screens 576px and smaller will display navbar links equally distributed */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 250px) {
+    .Navbar .Navbar-right a{
+        width: 20%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 6px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .Navbar a{
-        width: 25%; /* This makes each link take up 1/4 of the navbar */
-        font-size: 12px;
+        width: 20%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 10px;
     }
 }
 
@@ -214,11 +234,12 @@ footer {
 }
 
 /* Screens that are 576px and smaller will not display the background video */
-@media screen and (max-width: 576px) {
+@media screen and (max-width:200px) {
     #Typing_Video {
         display: none;
     }
 }
+
 
 /* Texts over the video */
 .Video_Text {
@@ -261,7 +282,7 @@ footer {
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 250px) {
     .Column_1, .Column_2, .Column_tall {
         overflow: auto;
     }
@@ -371,10 +392,11 @@ form {
 /*CARD */
 
 #card-box {
-    position: relative;
-    margin: auto;
+    margin: 1%;
     padding: 10px;
     align-content: center;
+    flex-wrap: wrap;
+    flex:max(400px, 100%/3 - 20px);
 }
 /* Float five columns side by side */
 .card-topview {
