@@ -1,183 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--Head-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0" />
-        <title>Portfolio PBB</title>
-        <link rel="stylesheet" type="text/css" href="portfolio.css">
-        <script src="portfolio.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <Style>
-            .fade-in-video { animation: fadeIn 5s; }
+<head>
+    <!-- REQUIRED META TAGS-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pablo Bernal">
+	  <meta name="description" content="Profile">
+    <title>PBB WD Profile</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="projects_card.css">
+    <!-- EXTERNAL LINK DESIGNS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
 
-            @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-            }
-        </Style>
-    </head>
-
-    <!--Body-->
-    <body>
-       
-        <!--Navbar-->
-        <div class="Navbar">
-            <a class="active" href="#Home"><i class="fa fa-home"></i>&nbsp;Home</a>
-            <a href="#About"><i class="glyphicon glyphicon-user"></i>&nbsp;About</a>
-            <a href="#GitHub"><i class="fa fa-github"></i>&nbsp;My Work</a>
-            <a href="#Contact"><i class="fa fa-usb"></i>&nbsp;Contact</a>
-            <div class="Navbar-right">
-                <a href=""><i class="fa fa-laptop"></i>&nbsp;Portfolio Pablo Bernal Bascunana</a>
+<body>
+    <!-- HEADER SECTION-->
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="https://www.linkedin.com/in/pablo-bernal-/"><img src="img/linkedin.png" width="35px" height="35px" class="logo" alt="Logo"></a>
+        <input type="checkbox" id="toggler">
+        <label for="toggler"><i class="bsc-menu-hambuger"></i></label>
+        
+        <div class="menu">
+          <ul class="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
+    <!-- HOME SECTION-->
+    <div id="home">
+      <div class="my-info">
+            <div class="encabezado">Hi, I'm Pablo</div>
+            <div class="contenido"><p>I love to code and this website gives me challenges to learn or try something new. I wish it was more popular for developers so I had more challenges that are interesting. </p>
+              <br>
+              <blockquote contenteditable="true" class="quote"><i>"I have no special talent. I am only passionately curious."</i></blockquote><cite contenteditable="true">Albert&nbsp;Einstein.</cite>
             </div>
-        </div>
+            <div class="image"></div> <!--MAYBE A EINSTEIN PHOTO-->
+      </div>
+    </div> 
+    <!-- ABOUT SECTION-->
+    <div id="about">
+        <h2>About</h2>
+        <p>With a passion for software development and a desire to progress my career. 
+          I am working on my 2nd Certificate in Web development at <i>ITonlineLearning</i>, 1st completed at <i>Pitman Academy</i>. 
+          I am excited about the opportunity to continue learning and growing as a developer in a real world projects.<br>
+        <p>In my academic and personal projects, I got experience in markup and style languages such as <strong>HTML</strong>, <strong>CSS</strong>, and familiarity with program language like JavaScript, and GitHub version control tool. 
+          I am a strong problem-solver and enjoy working in team environments, and I am excited to bring these skills to the team.</p><br>
+          <p>I am eager to be part of a team that values collaboration over isolation, and prioritizes continuous testing and development. 
+          I am also excited about the prospect of learning new skills, modern technologies, and methodologies. 
+          I am keen to learn new skills, even though I don't have prior experience.</p><br>
+        </p>
 
-        <!--Breaks inserted to add space between navbar and the first heading-->
-        <br>
-        <br>
-
-        <!--Background video-->
-        <div id="Home">
-            <video class="fade-in-video" autoplay muted lop id="Typing_Video">
-                <source src="Typing.mp4" type="video/mp4">
-                <!--Display message if video fails to run-->
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-
-        <!--Video text-->
-        <div class="Video_Text">
-                <p class="center" style="padding-top: 4em;">
-                    <q><b>The computer programmer is a creator of universes for which he alone is the lawgiver.
-                        <br>No playwright, no stage director, no emperor, however powerful, 
-                        <br>has ever exercised such absolute authority to arrange a stage or
-                        <br>field of battle and to command such unswervingly dutiful actors or troops.
-                    </q>
-                    <br> -Joseph Weizenbaum</b>
-                    <br>
-                </p>      
-        </div>
-
-        <!--About section-->
-        <div class="Row" id="About">
-            <h1 style="font-size: 50px;">About</h1>
-            <!--Left column-->
-            <div class="Column_2">
-                <img src="./Images/coding1.jpg" alt="Replace with your own image and description">
-            </div>
-            <!--Right column-->
-            <div class="Column_1">
-                <p>
-                    I am a graduate of <a href="https://www.pitman-training.com/our-centres/north-west-england/manchester/" target="_blank">Pitman’s Academy</a>, 
-                    Web and Software Developer Course, and trained in the following web and programming languages: HTML, CSS, JavaScript. This is just the beginning.
-                    <br>
-                    <br>I am a beginner web and software developer on my journey towards becoming a full-stack developer, with a good foundation in computer science and a passion for creating and building innovative software solutions. 
-                    I am driven, ambitious and motivated individual, by a desire to continuously learn and improve my skills, and I am eager to gain hands-on experience in a professional setting. 
-                    I have a strong work ethic and the ability to work effectively in a team environment. I am dedicated to writing clean, efficient, and well-documented code, 
-                    and I am committed to staying up-to-date with the latest technologies and industry best practices. 
-                    I am confident that my skills and determination will make me a valuable addition to any development team.
-                    <br>
-                    <br>
-                    <a href="#Contact">Contact</a> me below!
-                </p>
-            </div>
-        </div>
-        <br>
-        <!--Card section-->
-        <div id="card-box">
-            <div class="card-line">
-                <div class="card-topview">
-                  <div class="card" style="background-color: rgba(0,0,0,.01); border-radius: 20px;">
-                    <img src="./Images/Logos/html 2 (1).png" id="card-photo" alt="...">
-                    <span class="badge badge-pill badge-success"><h5>Confident</h5></span>
-                    </div>
+        <div class="container">
+            <div class="card">
+              <div class="box">
+                <div class="content-card">
+                  <img class="img-card" src="./Img/js 4 (2).png"/>
+                  <p>Very beginner, working my way in to get a proper Knowledge.</p>
+                  <a href="#">Basics</a>
                 </div>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="box">
+                <div class="content-card">
+                  <img class="img-card" src="./Img/css (1).png"/>
+                  <p>Good knowledge, driving to master it.</p>
+                  <a href="#">Good Knowledge</a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="box">
+                <div class="content-card">
+                  <img class="img-card" src="./Img/html 2 (1).png"/>
+                  <p>Good knowledge, driving to master it.</p>
+                  <a href="#">Good Knowledge</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+                <div class="box">
+                  <div class="content-card">
+                    <img class="img-card" src="./Img/bootstrap 1 (1).png"/>
+                    <p>Good knowledge, driving to master it.</p>
+                    <a href="#">Good Knowledge</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="box">
+                  <div class="content-card">
+                    <img class="img-card" src="./Img/GitHub purpel (2).png"/>
+                    <p>Very beginner, working my way in to get a proper Knowledge.</p>
+                    <a href="#">Basics</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="box">
+                  <div class="content-card">
+                    <h3>OTHERS</h3>
+                    <p>I am working on extend my knowledge in other applications.</p>
+                    <a href="#">More Certifications</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- PROJECT SECTION-->
+    <div id="projects">
+        <div class="flex-container">
+          <h2>Projects</h2>
+            <i style="color: black;" class="fa-solid fa-star fa-xm"></i>
+        </div>
+          <div id="card-group">
+              <div class="item">
+                <div class="card-title">
+                  <h3>Project Profile</h3>
+                  <p>Some text</p>
+                  <p>Some text</p>
+                </div>
+                <div class="odd-img">
+                  <img class="pic-item" src="./Img/portfolio.png">
+                </div>
+              </div>
+            
+              <div class="item">
+                <img class="pic-item" src="./Img/academy.png">
+                <div class="card-title">
+                  <h3>Cinemas</h3>
+                  <p>Some text</p>
+                  <p>Some text</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-title">
+                  <h3>Shop</h3>
+                  <p>Some text</p>
+                  <p>Some text</p>
+                </div>
+                <div class="odd-img">
+                  <img class="pic-item" src="./Img/Shop.png">
+                </div>
+              </div>
               
-                <div class="card-topview">
-                    <div class="card" style="background-color: rgba(0,0,0,.01);  border-radius: 20px;">
-                    <img src="./Images/Logos/css (1).png" id="card-photo" alt="...">
-                    <span class="badge badge-pill badge-success"><h5>Confident</h5></span>
-                    </div>
+              <div class="item">
+                <img class="pic-item" src="./Img/space station.png">
+                <div class="card-title">
+                  <h3>Space Station</h3>
+                  <p>Some text</p>
+                  <p>Some text</p>
                 </div>
-                
-                <div class="card-topview">
-                    <div class="card" style="background-color: rgba(0,0,0,.01); border-radius: 20px;">
-                    <img src="./Images/Logos/js 4 (2).png" id="card-photo" alt="...">
-                    <span class="badge badge-pill badge-warning"><h5>Need practice</h5></span>
-                    </div>
-                </div>
-                
-                <div class="card-topview">
-                    <div class="card" style="background-color: rgba(0,0,0,.01); border-radius: 20px;">
-                    <img src="./Images/Logos/GitHub purpel (2).png" id="card-photo" alt="...">
-                    <span class="badge badge-pill badge-primary"><h5>Confident</h5></span>
-                    </div>
-                </div>
-                
-                <div class="card-topview">
-                    <div class="card" style="background-color: rgba(0,0,0,.01); border-radius: 20px;">
-                    <img src="./Images/Logos/bootstrap 1 (1).png" id="card-photo" alt="...">
-                    <span class="badge badge-pill badge-success"><h5>Confident</h5></span>
-                    </div>
-                </div>  
-
-                <div class="card-topview">
-                    <div class="card" style="background-color: rgba(255, 255, 255,1); border-radius: 20px;">
-                        <p>I have practice other languages like: JQuery, React,...</p>
-                    <span class="badge badge-pill badge-warning"><h5>Need practice</h5></span>
-                    </div>
-                </div> 
-            </div>     
-        </div>
-        <!--END Card section-->
-
-        <!--GitHub section-->
-        <div class="Row" id="GitHub">
-            <h1 style="font-size: 45px;">My_Work</h1>
-            <!--Left column-->
-            <div class="Column_1">
-                <p>You can view my Portfolio on my GitHub profile here:
-                <p class="center" style="font-size: 30px;"><a href="https://github.com/PabloBernalBas/Projects" target="_blank" style="height: fit-content; width: fit-content;">Academy Projects</a></p>
-            </div>
-            <!--Right column-->
-            <div class="Column_2">
-                <a href="" target="_blank"><img src="./Images/Coding.jpg" alt="GitHub Logo"></a>
+              </div>
             </div>
         </div>
+    </div>
 
-        <!--Contact section-->
-        <div class="Row" id="Contact">
-            <h1 style="font-size: 50px;">Contact</h1>
-            <!--Contact image, left column-->
-            <div class="Column_2">
-                <img src="./Images/coding6.jpg" alt="Contact_Image">
+    <!-- CONTACT SECTION-->
+    <div id="contact">
+      <h2>Contact</h2>
+      <div class="contact1">
+        <picture class="contact2-pic">
+          <img src="./Img/idea_11.png" alt="..... " >
+        </picture>
+
+        <div class="container-contact1">
+          <div class="contact1-pic">
+            <img src="./Img/clipart368715.png" class="photo" alt="IMG">
+          </div>
+          <form class="contact1-form validate-form" action="mailto:polberny79@outlook.com">
+            <span class="contact1-form-title">Get in touch</span>
+            <div class="wrap-input1 validate-input" data-validate="Name is required">
+              <input class="input1" type="text" name="name" placeholder="Name">
+              <span class="shadow-input1"></span>
             </div>
-            <!--Contact form, right column-->
-            <div class="Column_1">
-                <br>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="https://formspree.io/f/mrgolqyv" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                        <label>Name:</label>
-                        <input type="text" placeholder="Name">
-                        <label>Email:</label>
-                        <input type="text" placeholder="Email">
-                        <label>Message:</label>
-                        <input type="text" placeholder="Message here...">
-                        <br>
-                        <br>
-                        <input type="submit" value="SUBMIT">
-                </form>
+            <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+              <input class="input1" type="text" name="email" placeholder="Email">
+              <span class="shadow-input1"></span>
             </div>
+            <div class="wrap-input1 validate-input" data-validate="Subject is required">
+              <input class="input1" type="text" name="subject" placeholder="Subject">
+              <span class="shadow-input1"></span>
+            </div>
+            <div class="wrap-input1 validate-input" data-validate="Message is required">
+              <textarea class="input1" name="message" placeholder="Message"></textarea>
+              <span class="shadow-input1"></span>
+            </div>
+            <div class="container-contact1-form-btn">
+              <button class="contact1-form-btn">
+              <span>
+              Send Email
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </span>
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
 
-        <!--Footer section-->
-        <footer>
-            <div class="footer">
-                <h3>&copy2022 Pablo Bernal Bascunana<a href="" target="_blank"></a></h3>
-            </div>
-        </footer>
-    </body>
+    </div>
+
+
+    <!-- FOOTER SECTION-->
+    <footer class="main-footer">
+        <p class="footer-par">&copy; Copyright 2023 PBB WD </p>
+    </footer>
+
+
+
+</body>
 </html>
